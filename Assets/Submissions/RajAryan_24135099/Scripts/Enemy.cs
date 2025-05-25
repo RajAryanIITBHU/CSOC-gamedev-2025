@@ -19,14 +19,10 @@ public class Enemy : MonoBehaviour
         CurrHealth = MaxHealth;
 
         Transform bar = transform.Find("HealthBar");
-
-        
-
-
+       
         if (bar != null)
         {
             healthBarSprite = bar.GetComponent<SpriteRenderer>();
-            Debug.Log("HealthBar");
 
             Vector3 scale = healthBarSprite.transform.localScale;
             scale.x = healthBarScale;

@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     SpriteRenderer healthBarSprite;
     public int MaxHealth = 100;
     private int CurrHealth;
-    public float healthBarScale = 1.9f;
+    public float healthBarScale = 0.9f;
 
     void Start()
     {
@@ -19,7 +19,6 @@ public class Player : MonoBehaviour
         if (bar != null)
         {
             healthBarSprite = bar.GetComponent<SpriteRenderer>();
-            Debug.Log("HealthBar");
 
             Vector3 scale = healthBarSprite.transform.localScale;
             scale.x = healthBarScale;

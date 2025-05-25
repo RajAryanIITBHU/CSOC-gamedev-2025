@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -36,13 +38,5 @@ public class EnemySpawner : MonoBehaviour
                 yield return new WaitForSeconds(retryDelay);
             }
         }
-    }
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.green;
-        Vector2 center = (spawnAreaMin + spawnAreaMax) / 2f;
-        Vector2 size = spawnAreaMax - spawnAreaMin;
-        Gizmos.DrawWireCube(center, size);
     }
 }
