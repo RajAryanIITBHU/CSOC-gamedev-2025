@@ -10,6 +10,8 @@ public class EnemySpawner : MonoBehaviour
     public Vector2 spawnAreaMin;
     public Vector2 spawnAreaMax;
     public LayerMask collisionMask;
+    private int spawned = 0;
+    
 
     public float retryDelay = 0.05f;
 
@@ -20,7 +22,6 @@ public class EnemySpawner : MonoBehaviour
 
     System.Collections.IEnumerator SpawnEnemies()
     {
-        int spawned = 0;
         while (spawned < numberToSpawn)
         {
             Vector2 spawnPos = new Vector2(
